@@ -1,0 +1,36 @@
+[user]
+	name = Fred Hatfull
+	email = fred.hatfull@gmail.com
+[pager]
+	show-branch = true
+[alias]
+	st = status
+	ci = commit -a -v
+	co = checkout
+	nb = checkout -b 
+	oneline = log --oneline
+	graph = log --oneline --graph --decorate --abbrev-commit
+	last = log -1
+	patch = add --patch
+	amend = commit --ammend
+	staged = diff --cached
+	both = diff HEAD
+	sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
+	abbrev = !sh -c 'git rev-parse --short ${1-`echo HEAD`}' -
+	fixup = !sh -c 'git commit --fixup $1 && \
+                  git stash && \
+                  git rebase -i $1~1 && \
+                  git stash pop' -
+[rebase]
+	autosquash = true
+[rerere]
+	enabled = true
+[core]
+	excludesfile = /Users/fred/.gitignore_global
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+[help]
+	autocorrect = 15

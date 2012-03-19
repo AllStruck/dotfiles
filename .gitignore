@@ -1,0 +1,7 @@
+*
+!.profile
+!.git-completion
+!.color_term_with_git
+!.gitignore
+!.gitconfig
+!.gitignore_global
