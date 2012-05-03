@@ -91,5 +91,9 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
+" Some weird fix for installing tmux via brew
+" https://github.com/mxcl/homebrew/pull/11731
+set runtimepath+=/usr/local/share/vim/vimfiles/
+
 colorscheme molokai
 
