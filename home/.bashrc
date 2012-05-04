@@ -5,6 +5,9 @@ PROMPT_SCRIPT="sexy_prompt.bash"
 
 ## ACTION
 
+# Don't blow up if a directory is empty
+shopt -s nullglob
+
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
