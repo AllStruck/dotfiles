@@ -31,6 +31,12 @@ source .exports
 # Load the prompt of choice
 source .prompts/$PROMPT_SCRIPT
 
+MISC=".misc/*.bash"
+for misc in $MISC
+do
+	source $misc
+done
+
 # Load up any custom scripts
 CUSTOM=".custom/*.bash"
 for custom in $CUSTOM
