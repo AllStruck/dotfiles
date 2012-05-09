@@ -57,6 +57,11 @@ $(tmux -q list-windows -t "${session_name}" | sed -re 's/^([^:]+):.*$/'"${sessio
     COMPREPLY=( ${COMPREPLY[@]:-} $(compgen -W "${sessions}" -- "${cur}") )
 }
 
+_attach_session_complete() {
+	cur=${COMP_WORDS[COMP_CWORD]}
+	_tmux_complete_session "${cur}"
+}
+
 _tmux() {
     local cur prev
     local i cmd cmd_index option option_index
@@ -184,6 +189,6 @@ _tmux() {
 
 }
 complete -F _tmux tmux
-
+complete -F _attach_session_complete attach
 # END tmux completion
 
