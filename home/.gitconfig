@@ -12,7 +12,7 @@
 	graph = log --oneline --graph --decorate --abbrev-commit
 	last = log -1
 	patch = add --patch
-	amend = commit --ammend
+	amend = commit --amend
 	staged = diff --cached
 	both = diff HEAD
 	sha1 = !sh -c 'git rev-parse ${1-`echo HEAD`}' -
