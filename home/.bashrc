@@ -7,6 +7,7 @@ PROMPT_SCRIPT="sexy_prompt.bash"
 # -.- wtf
 if [ ${TERM} == "dumb" ]; then
 	PROMPT_SCRIPT=".color_term_with_git.bash"
+	return 0
 fi
 
 ## ACTION
