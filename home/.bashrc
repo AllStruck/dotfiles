@@ -23,32 +23,32 @@ shopt -s histappend
 shopt -s dotglob
 
 # Load up all of the aliases
-ALIAS_FILES=".alias/*.bash"
+ALIAS_FILES="$HOME/.alias/*.bash"
 for alias_file in $ALIAS_FILES
 do
 	source $alias_file
 done
 
 # Load up all the completion extensions
-COMPLETERS=".completion/*.bash"
+COMPLETERS="$HOME/.completion/*.bash"
 for completer in $COMPLETERS
 do
 	source $completer
 done
 
-source .exports
+source $HOME/.exports
 
 # Load the prompt of choice
-source .prompts/$PROMPT_SCRIPT
+source $HOME/.prompts/$PROMPT_SCRIPT
 
-MISC=".misc/*.bash"
+MISC="$HOME/.misc/*.bash"
 for misc in $MISC
 do
 	source $misc
 done
 
 # Load up any custom scripts
-CUSTOM=".custom/*.bash"
+CUSTOM="$HOME/.custom/*.bash"
 for custom in $CUSTOM
 do
 	source $custom
