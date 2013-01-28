@@ -40,7 +40,7 @@ function put_dots_on() {
 			echo "Copying local castle instead of cloning..."
 			scp -r ~/.homesick/repos/dotfiles "$REMOTE":~/.homesick/repos/
 		else
-			ssh "$REMOTE" -- git clone git://github.com/fxh32/dotfiles.git ~/.homesick/repos/dotfiles
+			ssh "$REMOTE" -- git clone git://github.com/fhats/dotfiles.git ~/.homesick/repos/dotfiles
 
 			if [ $? -ne 0 ]; 
 			then 
@@ -80,7 +80,7 @@ function put_dots_on() {
 
 		ssh $REMOTE gem install homesick
 
-		ssh $REMOTE ~/.gem/ruby/1.8/bin/homesick clone git://github.com/fxh32/dotfiles.git
+		ssh $REMOTE ~/.gem/ruby/1.8/bin/homesick clone git://github.com/fhats/dotfiles.git
 
 		ssh $REMOTE ~/.gem/ruby/1.8/bin/homesick symlink dotfiles
 		

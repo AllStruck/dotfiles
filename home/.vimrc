@@ -97,3 +97,5 @@ set runtimepath+=/usr/local/share/vim/vimfiles/
 
 colorscheme molokai
 
+set colorcolumn=80
+highlight ColorColumn ctermbg=67 guibg=LightSteelBlue

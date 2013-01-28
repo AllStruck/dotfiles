@@ -7,6 +7,7 @@ alias gut='git'
 alias gt='git'
 alias gti='git'
 alias g='git'
+alias got='git'
 
 # Pipe input to me to have pretty-printed json-decoded output
 alias nicejson='python -c "import pprint
