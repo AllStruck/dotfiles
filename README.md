@@ -10,7 +10,7 @@ This is a [homesick](https://github.com/technicalpickles/homesick) castle. As su
 
 Now clone the repo:
 
-	homesick clone git://github.com/fxh32/dotfiles.git
+	homesick clone git://github.com/fhats/dotfiles.git
 
 and symlink everything into your home directory:
 
