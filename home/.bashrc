@@ -53,3 +53,5 @@ for custom in $CUSTOM
 do
 	source $custom
 done
+
+shopt -u nullglob
