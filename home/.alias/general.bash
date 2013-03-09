@@ -1,6 +1,12 @@
 alias i=ipython
 alias infinigrep='grep -ir'
-alias ls='ls -ah --color=always'
+
+LS_OPTS='-ah'
+if [ $(uname) == "Linux" ]; then
+	LS_OPTS="$LS_OTPS --color=always"
+fi
+
+alias ls="ls $LS_OPTS"
 
 # I use git a lot
 alias gut='git'
