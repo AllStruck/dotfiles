@@ -1,6 +1,6 @@
 alias i=ipython
 alias infinigrep='grep -ir'
-alias ls='ls -ah'
+alias ls='ls -ah --color=always'
 
 # I use git a lot
 alias gut='git'
