@@ -1,2 +1,3 @@
 home/.custom/*
+home/.vim/swaps/*
 !home/.custom/.gitignore

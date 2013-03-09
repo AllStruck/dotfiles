@@ -97,5 +97,9 @@ set runtimepath+=/usr/local/share/vim/vimfiles/
 
 colorscheme molokai
 
+set list
+" Enter the right-angle-quote by pressing Ctrl-k then >>
+set list listchars=tab:»·,trail:·
+
 set colorcolumn=80
 highlight ColorColumn ctermbg=67 guibg=LightSteelBlue
