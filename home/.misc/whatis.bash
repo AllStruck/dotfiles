@@ -1,0 +1,3 @@
+function whatis() {
+	less `which $*`
+}

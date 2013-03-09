@@ -21,6 +21,7 @@
                   git stash && \
                   git rebase -i $1~1 && \
                   git stash pop' -
+	back = !git reflog | grep 'checkout: moving from' | head -n 1 | sed -rne 's/^.*checkout: moving from (\\S+).*$/\\1/gip' | xargs git checkout
 [rebase]
 	autosquash = true
 [rerere]
