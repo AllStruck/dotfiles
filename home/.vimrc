@@ -103,3 +103,6 @@ set list listchars=tab:»·,trail:·
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=67 guibg=LightSteelBlue
+
+" Use the GuessIndent plugin (packaged with my dotfiles) to detect indentation
+autocmd BufReadPost * :GuessIndent

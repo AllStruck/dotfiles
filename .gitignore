@@ -1,4 +1,5 @@
 home/.custom/*
 home/.vim/swaps/*
 home/.vim/.netrwhist
+home/.vim/.VimballRecord
 !home/.custom/.gitignore
