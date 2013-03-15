@@ -67,8 +67,24 @@ function put_dots_on() {
 		
 		THOR_GEM="/nail/home/fhats/sources/thor/thor-0.15.0.gem"
 
+		# TODO: this is janky as shit
+		GEMPATH="~/.gem/ruby/1.8"
+		IFS=":"
+		GEMENVPATH="$(ssh $REMOTE gem env gempath)"
+		set $GEMENVPATH
+		for item
+		do
+			if [[ "$item" == */home* ]]
+			then
+				GEMPATH="$item"
+				break
+			fi
+		done
+
+		HOMESICK="$GEMPATH/bin/homesick"
+
 		# Setup a scratch directory remotely
-		ssh $REMOTE mkdir -p ~/homesick_install
+		ssh $REMOTE 'mkdir -p ~/homesick_install'
 	
 		if [ -e "$THOR_GEM" ]
 		then
@@ -78,13 +94,15 @@ function put_dots_on() {
 			ssh $REMOTE gem install ~/homesick_install/thor-0.15.0.gem
 		fi
 
-		ssh $REMOTE gem install homesick
+		ssh $REMOTE "gem install homesick --user-install"
 
-		ssh $REMOTE ~/.gem/ruby/1.8/bin/homesick clone git://github.com/fhats/dotfiles.git
+		ssh $REMOTE "$HOMESICK clone git://github.com/fhats/dotfiles.git"
 
-		ssh $REMOTE ~/.gem/ruby/1.8/bin/homesick symlink dotfiles
+		ssh $REMOTE "$HOMESICK symlink dotfiles"
 		
-		ssh $REMOTE rm -rf ~/homesick_install
+		ssh $REMOTE "echo 'alias homesick=$HOMESICK' > ~/.custom/homesick_path.bash"
+
+		ssh $REMOTE 'rm -rf ~/homesick_install'
 	fi
 
 }
