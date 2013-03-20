@@ -5,7 +5,7 @@ PROMPT_SCRIPT="sexy_prompt.bash"
 
 # FIX for SFTP not dealing with color, multi-line prompts
 # -.- wtf
-if [ ${TERM} == "dumb" ]; then
+if [ ${TERM} == "dumb" ] || [ ${TERM} == "screen" ]; then
 	PROMPT_SCRIPT=".color_term_with_git.bash"
 	return 0
 fi
