@@ -94,7 +94,7 @@ function put_dots_on() {
 			ssh $REMOTE gem install ~/homesick_install/thor-0.15.0.gem
 		fi
 
-		ssh $REMOTE "gem install homesick --user-install"
+		ssh $REMOTE "gem install homesick --version '=0.6.1' --user-install"
 
 		ssh $REMOTE "$HOMESICK clone git://github.com/fhats/dotfiles.git"
 
