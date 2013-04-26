@@ -53,7 +53,7 @@ export PROMPT_GIT_COLOR=${PURPLE}
 source ~/.prompts/prompt_config.bash
 
 function parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+	[[ $(git status --porcelain 2> /dev/null | wc -l | tr -d ' ') != "0" ]] && echo "*"
 }
 
 function parse_git_branch() {
