@@ -55,3 +55,6 @@ do
 done
 
 shopt -u nullglob
+
+# Add ~/bin to the PATH
+export PATH=$PATH:~/.bin

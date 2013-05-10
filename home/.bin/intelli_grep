@@ -1,0 +1,6 @@
+#!/bin/bash
+# Just a small wrapper around grep to avoid some common stuff I don't care
+# about.
+
+# TODO: Do something smarter to list dirs I don't care about
+grep -r "$@" 2>/dev/null | grep -v '.git' | grep -v '.svn'
