@@ -37,3 +37,5 @@
 	autocorrect = 15
 [push]
 	default = matching
+[credential]
+	helper = osxkeychain
