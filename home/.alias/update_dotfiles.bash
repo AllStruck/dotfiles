@@ -1,3 +1,3 @@
-alias dots="cd ~/.homesick/repos/dotfiles"
+alias dots="cd ~/.homesick/repos/AllStruck/dotfiles"
 alias reload_dots="~ && source .bashrc && -"
-alias update_dotfiles="homesick pull dotfiles && homesick symlink dotfiles -f && source ~/.bashrc"
+alias update_dotfiles="homesick pull AllStruck/dotfiles && homesick symlink AllStruck/dotfiles -f && source ~/.bashrc"

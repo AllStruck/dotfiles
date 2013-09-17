@@ -37,8 +37,8 @@ do
 done
 
 # Load bash completions:
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+if [ -f /usr/share/bash_completion/bash_completion ] && ! shopt -oq posix; then
+    . /usr/share/bash_completion/bash_completion
 fi
 
 

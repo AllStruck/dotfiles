@@ -60,4 +60,4 @@ function parse_git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-PS1="\[${BOLD}${PROMPT_USER_COLOR}\]\u \[$WHITE\]at \[$PROMPT_HOST_COLOR\]\h \[$WHITE\]in \[$PROMPT_DIR_COLOR\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PROMPT_GIT_COLOR\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+PS1="\[${BOLD}${PROMPT_USER_COLOR}\]\u\[$WHITE\]@\[$PROMPT_HOST_COLOR\]\h:\[$WHITE\] \[$PROMPT_DIR_COLOR\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" (\")\[$PROMPT_GIT_COLOR\]\$(parse_git_branch)\[$WHITE\]\n#>\[$RESET\]"
