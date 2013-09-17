@@ -36,6 +36,13 @@ do
 	source $completer
 done
 
+# Load bash completions:
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+
+
 source $HOME/.exports
 
 # Load the prompt of choice
