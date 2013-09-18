@@ -14,6 +14,7 @@ alias ssharchimedes="ssh -l root archimedes"
 alias sshmckay="ssh -l root mckay -p 42123"
 alias sshcooper="ssh -l root cooper"
 alias sshcarter="ssh -l root carter"
+alias sshfleinhardt="ssh root@fleinhardt"
 alias sshgpfeeds="ssh pi@172.16.25.202"
 alias sshgpphones="ssh root@172.16.0.60"
 

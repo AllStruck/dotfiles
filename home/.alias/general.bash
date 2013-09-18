@@ -15,7 +15,7 @@ alias gti='git'
 alias got='git'
 
 # LS
-alias l='ls -alf'
+alias l='ls -al'
 alias ll='ls -l'
 alias la='ls -a'
 
