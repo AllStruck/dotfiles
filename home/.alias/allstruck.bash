@@ -23,7 +23,7 @@ alias dude="echo 'You receive a rug that really brings the room together.'"
 alias dnsflush="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias flushdns="dnsflush"
 
-if [-f "/usr/local/bin/brew" ]; then
+if [ -f "/usr/local/bin/brew" ]; then
     alias apt-get="brew"
 fi
 
