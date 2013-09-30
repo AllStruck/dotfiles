@@ -64,7 +64,7 @@ done
 shopt -u nullglob
 
 # Add ~/bin to the PATH
-export PATH=$PATH:~/.bin
+export PATH=$PATH:~/.bin:~/packer
 
 # Add WP-CLI to PATH
     export PATH=/root/.wp-cli/bin:$PATH
