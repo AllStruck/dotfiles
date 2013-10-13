@@ -18,8 +18,8 @@ fi
 case "$PROMPT_STYLE" in
 'default')	
 			export PROMPT_USER_COLOR=$(tput setaf 119)
-			export PROMPT_HOST_COLOR=$(tput setaf 123)
-			export PROMPT_DIR_COLOR=$(tput setaf 227)
+			export PROMPT_HOST_COLOR=$(tput setaf 240)
+			export PROMPT_DIR_COLOR=$(tput setaf 27)
 			export PROMPT_GIT_COLOR=$(tput setaf 166)
 ;;
 'danger')
